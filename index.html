@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Figtree:ital,wght@0,300..900;1,300..900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f5ead8; }
+  * { box-sizing: border-box; }
+  body { -webkit-font-smoothing: antialiased; }
+  a { color: #9e2409; text-decoration: none; }
+  a:hover { color: #cc3311; }
+  ::selection { background: #f2cdc0; }
+  :focus-visible { outline: 2px solid #cc3311; outline-offset: 2px; }
+  input, textarea, button, select { font: inherit; }
+  @media (max-width: 1024px) {
+    #hero-globe {
+      position: static;
+      top: auto;
+      right: auto;
+      width: min(300px, 66%);
+      height: auto;
+      aspect-ratio: 400 / 282;
+      margin: 0 0 22px;
+      opacity: 0.5;
+    }
+    #hero-copy { max-width: 100%; }
+  }
+</style>
+</helmet>
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="300" fill="#f5ead8"></rect>
+    <circle cx="200" cy="150" r="74" fill="#cc3311"></circle>
+    <text x="200" y="150" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-size="62" fill="#fffaf0">T</text>
+  </svg>
+</template>
+<div style="font-family: 'Figtree', system-ui, sans-serif; color: #201e1d; background: #f5ead8; min-height: 100%; overflow-x: hidden;">
+
+  <div style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px clamp(20px, 5vw, 64px); max-width: 1320px; margin: 0 auto; flex-wrap: wrap;">
+    <a href="https://transversaal.io" target="_self" style="display: block; line-height: 0;"><img src="transversaal-logo-alpha.png" alt="Transversaal — home" style="height: 44px; width: auto; display: block;"></a>
+    <div style="display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); flex-wrap: wrap; justify-content: flex-end;">
+      <a href="#capabilities" style="font-size: 15px; font-weight: 600; letter-spacing: 0.01em;">Capabilities</a>
+      <a href="#work" style="font-size: 15px; font-weight: 600; letter-spacing: 0.01em;">Work</a>
+      <a href="#contact" style="display: inline-flex; align-items: center; padding: 11px 22px; border-radius: 999px; background: #cc3311; color: #fffaf0; font-size: 15px; font-weight: 700;" style-hover="background: #9e2409; color: #fffaf0;">Start a project</a>
+    </div>
+  </div>
+
+  <section style="max-width: 1320px; margin: 0 auto; padding: clamp(36px, 7vw, 96px) clamp(20px, 5vw, 64px) clamp(40px, 6vw, 80px); position: relative;">
+    <div id="hero-globe" style="position: absolute; top: -30px; right: -130px; width: 520px; height: 380px; z-index: 0; pointer-events: none; opacity: 0.6;">
+      <svg viewBox="0 0 400 282" width="100%" height="100%" fill="none" stroke="#c49a2a" stroke-width="3" aria-hidden="true">
+        <ellipse cx="200" cy="141" rx="146" ry="128"></ellipse>
+        <ellipse cx="200" cy="141" rx="100" ry="128"></ellipse>
+        <ellipse cx="200" cy="141" rx="50" ry="128"></ellipse>
+        <line x1="200" y1="13" x2="200" y2="269"></line>
+        <line x1="58" y1="141" x2="342" y2="141"></line>
+        <path d="M78 82 C 130 62, 270 62, 322 82"></path>
+        <path d="M78 200 C 130 220, 270 220, 322 200"></path>
+      </svg>
+    </div>
+    <div id="hero-copy" style="position: relative; z-index: 1; max-width: min(900px, max(240px, calc(100% - 350px)));">
+      <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a6b14; margin-bottom: 22px;">Experiential Marketing · Concepting · Fabrication</div>
+      <h1 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(42px, 8vw, 92px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 28px; text-wrap: balance;">We build how your brand shows up IRL.</h1>
+      <p style="font-size: clamp(17px, 2.2vw, 22px); line-height: 1.55; color: #4a423c; max-width: 640px; margin: 0 0 36px; text-wrap: pretty;">Transversaal concepts, designs, fabricates and executes physical brand experiences — vehicles, sets, stages and studios.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="#work" style="display: inline-flex; align-items: center; padding: 15px 30px; border-radius: 999px; background: #cc3311; color: #fffaf0; font-size: 16px; font-weight: 700;" style-hover="background: #9e2409; color: #fffaf0;">See the work</a>
+        <a href="#capabilities" style="display: inline-flex; align-items: center; padding: 15px 30px; border-radius: 999px; background: transparent; border: 1.5px solid #cbb693; color: #201e1d; font-size: 16px; font-weight: 700;" style-hover="background: #f0dcc0; color: #201e1d;">What we do</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities" style="max-width: 1320px; margin: 0 auto; padding: clamp(40px, 6vw, 88px) clamp(20px, 5vw, 64px);">
+    <div style="display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 52px);">
+      <h2 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; margin: 0;">Capabilities</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: clamp(14px, 2vw, 22px);">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="12">
+        <div style="background: #fffaf0; border-radius: 20px; padding: 26px 24px 28px; box-shadow: 0 1px 2px rgba(48,30,14,0.06); display: flex; flex-direction: column; gap: 12px; min-height: 190px;" style-hover="box-shadow: 0 8px 22px rgba(48,30,14,0.10); transform: translateY(-2px);">
+          <div style="width: 40px; height: 40px; border-radius: 999px; background: #f7e0d6; color: #9e2409; display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500;">{{ s.num }}</div>
+          <h3 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: 22px; line-height: 1.15; margin: 0; letter-spacing: -0.005em;">{{ s.name }}</h3>
+          <p style="font-size: 15px; line-height: 1.5; color: #5a514a; margin: 0; text-wrap: pretty;">{{ s.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="work" style="background: #201e1d; color: #f5ead8; padding: clamp(44px, 7vw, 96px) 0 clamp(48px, 7vw, 104px); margin-top: clamp(24px, 4vw, 56px);">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px);">
+      <div style="display: flex; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 48px);">
+        <h2 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(32px, 5vw, 56px); line-height: 1.02; margin: 0; color: #f5ead8;">Selected work</h2>
+        <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.1em; color: #c49a2a;">PICK A PROJECT →</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: clamp(20px, 3vw, 44px); align-items: start;">
+
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <sc-for list="{{ projectList }}" as="p" hint-placeholder-count="6">
+            <div onClick="{{ p.select }}" style="{{ p.rowStyle }}" style-hover="background: #2e2b29;">
+              <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; color: #c49a2a; min-width: 26px; padding-top: 4px;">{{ p.num }}</div>
+              <div style="display: flex; flex-direction: column; gap: 5px; min-width: 0;">
+                <div style="font-family: 'Caprasimo', Georgia, serif; font-size: clamp(18px, 2.1vw, 24px); line-height: 1.14; letter-spacing: -0.005em;">{{ p.title }}</div>
+                <div style="font-size: 13.5px; color: #a99f92; line-height: 1.35;">{{ p.meta }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="background: #2a2725; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.28);">
+          <div style="position: relative; aspect-ratio: 16 / 10; background: repeating-linear-gradient(135deg, #3a3633 0 14px, #332f2c 14px 28px); display: flex; align-items: center; justify-content: center;">
+            <sc-if value="{{ active.hasHeroImg }}" hint-placeholder-val="{{ false }}">
+              <div role="img" aria-label="{{ active.title }}" style="{{ active.heroImgStyle }}"></div>
+            </sc-if>
+            <div style="position: absolute; top: 18px; left: 18px; right: 18px; display: flex; gap: 8px; flex-wrap: wrap; z-index: 1;">
+              <sc-for list="{{ active.tags }}" as="t" hint-placeholder-count="3">
+                <div style="padding: 6px 13px; border-radius: 999px; background: rgba(32,30,29,0.78); color: #f5ead8; font-size: 12px; font-weight: 600; letter-spacing: 0.02em; backdrop-filter: blur(4px);">{{ t }}</div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ active.noHeroImg }}" hint-placeholder-val="{{ true }}">
+              <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; color: #a99f92; text-align: center; padding: 0 24px; text-transform: uppercase;">{{ active.heroSlot }}</div>
+            </sc-if>
+          </div>
+
+          <div style="padding: clamp(24px, 3vw, 40px);">
+            <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #c49a2a; margin-bottom: 14px;">{{ active.kicker }}</div>
+            <h3 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.06; margin: 0 0 18px; color: #f5ead8; letter-spacing: -0.01em;"><sc-if value="{{ active.noTitleLink }}" hint-placeholder-val="{{ true }}">{{ active.title }}</sc-if><sc-if value="{{ active.hasTitleLink }}" hint-placeholder-val="{{ false }}"><a href="{{ active.titleHref }}" target="_blank" rel="noopener" style="color: #f5ead8; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; text-decoration-color: #f0a830;" style-hover="color: #ffd9a0;">{{ active.title }}</a></sc-if></h3>
+            <div style="display: flex; flex-direction: column; gap: 14px; margin: 0 0 28px; max-width: 620px;">
+              <p style="font-size: clamp(15.5px, 1.6vw, 18px); line-height: 1.6; color: #d6c9b4; margin: 0; text-wrap: pretty;">{{ active.summary }}</p>
+              <sc-if value="{{ active.hasSummaryB }}" hint-placeholder-val="{{ true }}">
+                <p style="font-size: clamp(15.5px, 1.6vw, 18px); line-height: 1.6; color: #d6c9b4; margin: 0; text-wrap: pretty;"><sc-if value="{{ active.sb.noLink }}" hint-placeholder-val="{{ true }}">{{ active.sb.text }}</sc-if><sc-if value="{{ active.sb.hasLink }}" hint-placeholder-val="{{ false }}">{{ active.sb.pre }}<a href="{{ active.sb.href }}" target="_blank" rel="noopener" style="color: #f0a830; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;" style-hover="color: #ffc25c;">{{ active.sb.linkText }}</a>{{ active.sb.post }}</sc-if></p>
+              </sc-if>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px 24px; padding: 24px 0; border-top: 1px solid #3d3835; border-bottom: 1px solid #3d3835; margin-bottom: 28px;">
+              <sc-for list="{{ active.facts }}" as="f" hint-placeholder-count="4">
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                  <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #a99f92;">{{ f.label }}</div>
+                  <div style="font-size: 15px; font-weight: 600; color: #f0e3cd; line-height: 1.3;">{{ f.value }}</div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #a99f92; margin-bottom: 14px;">Scope of work</div>
+            <div style="display: flex; flex-direction: column; gap: 11px; margin-bottom: 30px;">
+              <sc-for list="{{ active.scopeItems }}" as="line" hint-placeholder-count="4">
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="width: 8px; height: 8px; border-radius: 999px; background: #cc3311; margin-top: 7px; flex: 0 0 auto;"></div>
+                  <div style="font-size: 15.5px; line-height: 1.5; color: #d6c9b4;"><sc-if value="{{ line.noLink }}" hint-placeholder-val="{{ true }}">{{ line.text }}</sc-if><sc-if value="{{ line.hasLink }}" hint-placeholder-val="{{ false }}">{{ line.pre }}<a href="{{ line.href }}" target="_blank" rel="noopener" style="color: #f0a830; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;" style-hover="color: #ffc25c;">{{ line.linkText }}</a>{{ line.post }}</sc-if></div>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;">
+              <sc-for list="{{ active.mediaItems }}" as="m" hint-placeholder-count="3">
+                <div role="img" aria-label="{{ m.label }}" onClick="{{ m.onClick }}" style="{{ m.style }}">
+                  <sc-if value="{{ m.hasVideo }}" hint-placeholder-val="{{ false }}">
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(20,18,17,0.32);">
+                      <div style="width: 46px; height: 46px; border-radius: 999px; background: #cc3311; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.4);">
+                        <div style="width: 0; height: 0; border-left: 14px solid #fffaf0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px;"></div>
+                      </div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ m.isContain }}" hint-placeholder-val="{{ false }}">
+                    <div style="{{ m.sharpStyle }}"></div>
+                  </sc-if>
+                  <sc-if value="{{ m.noImg }}" hint-placeholder-val="{{ true }}">
+                    <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.08em; color: #a99f92; text-transform: uppercase; line-height: 1.4;">{{ m.label }}</div>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeVideo }}" style="position: fixed; inset: 0; z-index: 90; background: rgba(20,18,17,0.9); display: flex; align-items: center; justify-content: center; padding: 24px;">
+      <div onClick="{{ stopProp }}" style="position: relative; width: min(400px, 88vw); aspect-ratio: 9 / 16; max-height: 84vh; border-radius: 20px; overflow: hidden; background: #000; box-shadow: 0 30px 70px rgba(0,0,0,0.5);">{{ videoPlayer }}</div>
+      <a href="{{ videoWatchUrl }}" target="_blank" rel="noopener" style="position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #e0d3bc; text-decoration: underline; text-underline-offset: 3px;" style-hover="color: #fffaf0;">Watch on YouTube</a>
+      <div onClick="{{ closeVideo }}" style="position: absolute; top: 20px; right: 24px; width: 42px; height: 42px; border-radius: 999px; background: rgba(245,234,216,0.14); color: #f5ead8; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 600; cursor: pointer;" style-hover="background: rgba(245,234,216,0.26);">×</div>
+    </div>
+  </sc-if>
+
+  <section id="contact" style="max-width: 1320px; margin: 0 auto; padding: clamp(48px, 8vw, 110px) clamp(20px, 5vw, 64px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(28px, 5vw, 72px); align-items: start;">
+      <div>
+        <h2 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5.5vw, 60px); line-height: 1.0; margin: 0 0 22px; letter-spacing: -0.015em; text-wrap: balance;">Tell us what you're building.</h2>
+        <p style="font-size: clamp(16px, 1.9vw, 19px); line-height: 1.6; color: #4a423c; margin: 0 0 28px; max-width: 460px; text-wrap: pretty;">Send the brief, the dates and the budget range. We'll come back with an approach and a number.</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 16px; color: #4a423c;">
+          <div><a href="mailto:aa@transversaal.io">aa@transversaal.io</a></div>
+          <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.06em; color: #8a6b14;">LOS ANGELES · ON THE ROAD</div>
+        </div>
+      </div>
+
+      <div style="background: #fffaf0; border-radius: 24px; padding: clamp(24px, 3vw, 40px); box-shadow: 0 8px 28px rgba(48,30,14,0.08);">
+        <sc-if value="{{ formSent }}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 14px; padding: 18px 0;">
+            <div style="font-family: 'Caprasimo', Georgia, serif; font-size: 26px; line-height: 1.15; color: #201e1d;">Got it — thanks.</div>
+            <div style="font-size: 16px; line-height: 1.55; color: #4a423c;">Your brief is in. We'll come back with an approach and a number.</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ formLive }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 18px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 18px;">
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; color: #3a332e;">Name</span>
+              <input type="text" ref="{{ nameRef }}" placeholder="Your name" style="border: 1.5px solid #e0cfae; background: #f9f1e2; border-radius: 999px; padding: 13px 18px; font-size: 15px; color: #201e1d; width: 100%;" style-focus="border-color: #cc3311; background: #fffaf0;">
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; color: #3a332e;">Email</span>
+              <input type="email" ref="{{ emailRef }}" placeholder="you@company.com" style="border: 1.5px solid #e0cfae; background: #f9f1e2; border-radius: 999px; padding: 13px 18px; font-size: 15px; color: #201e1d; width: 100%;" style-focus="border-color: #cc3311; background: #fffaf0;">
+            </label>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; color: #3a332e;">Company</span>
+            <input type="text" ref="{{ companyRef }}" placeholder="Brand or agency" style="border: 1.5px solid #e0cfae; background: #f9f1e2; border-radius: 999px; padding: 13px 18px; font-size: 15px; color: #201e1d; width: 100%;" style-focus="border-color: #cc3311; background: #fffaf0;">
+          </label>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <span style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; color: #3a332e;">What do you need?</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 9px;">
+              <sc-for list="{{ needs }}" as="n" hint-placeholder-count="6">
+                <div onClick="{{ n.toggle }}" style="{{ n.style }}">{{ n.label }}</div>
+              </sc-for>
+            </div>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.02em; color: #3a332e;">The brief</span>
+            <textarea rows="4" ref="{{ briefRef }}" placeholder="Dates, markets, scale, budget range" style="border: 1.5px solid #e0cfae; background: #f9f1e2; border-radius: 18px; padding: 14px 18px; font-size: 15px; color: #201e1d; width: 100%; resize: vertical; font-family: inherit;" style-focus="border-color: #cc3311; background: #fffaf0;"></textarea>
+          </label>
+          <sc-if value="{{ hasFormError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 14px; line-height: 1.45; color: #9e2409; font-weight: 600;">{{ formError }}</div>
+          </sc-if>
+          <button type="button" onClick="{{ submitForm }}" style="border: none; cursor: pointer; padding: 16px 28px; border-radius: 999px; background: #cc3311; color: #fffaf0; font-size: 16px; font-weight: 700; letter-spacing: 0.01em;" style-hover="background: #9e2409;" style-active="background: #851e07;">{{ submitLabel }}</button>
+        </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <div style="border-top: 1px solid #e3d3b4;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 28px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;">
+      <a href="https://transversaal.io" target="_self" style="display: block; line-height: 0;"><img src="transversaal-logo-alpha.png" alt="Transversaal — home" style="height: 30px; width: auto; display: block; opacity: 0.85;"></a>
+      <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.08em; color: #8a6b14;">© 2026 TRANSVERSAAL</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const SERVICES = [
+  ["Strategy & creative concepting", "The idea before the build. Positioning, activation concepts, and the pitch decks that sell them internally."],
+  ["Custom fabrications & buildouts", "In-house shop. Booths, bars, carts, kiosks, facades and one-off structures, engineered to travel and survive."],
+  ["Interactive set design", "Sets built to be touched, played with and posted. Photo moments, games, mechanical props, lighting."],
+  ["Mobile & vehicle activations", "Trucks, buses, trailers and carts turned into venues that go where the audience already is."],
+  ["Vinyl wrapping", "Vehicles, walls, floors, glass and hard goods. Print, prep and install, in the shop or on site."],
+  ["Merch production", "Apparel, headwear, accessories and specialty goods. Sourcing, sampling, decoration and fulfillment."],
+  ["Bespoke design + packaging", "Talent and influencer gifting: the object, the box, the insert, the unboxing sequence."],
+  ["Live broadcasting + podcasting", "Studio builds and live production. Multi-cam, audio, streaming and on-site control."],
+  ["Content capture", "Photo and video coverage while the activation is live, cut for social the same day."],
+  ["Production management & logistics", "Permits, freight, load-in, install, crew, strike. The unglamorous part that decides whether it works."],
+  ["Multi-market activation", "One build, many cities. Route planning, repeatable install kits and a travelling crew."],
+  ["Sponsorship integration", "Brand partners folded into a live property without breaking what people came for."]
+];
+
+const PROJECTS = [
+  {
+    title: "The Moro Pride Ride",
+    meta: "Moro · Pride Month · Mobile activation",
+    kicker: "Moro · Pride Month",
+    tags: ["Disco Cart integration", "Vinyl wrap", "Sign fabrication"],
+    paras: [
+      "To introduce Moro — a new sexual wellness brand designed for maximum pleasure — we executed Moro's first major brand initiative during PRIDE Month with a bang—a 360° campaign with content, experiential, & advertising extensions.",
+      "The marquee component was The Moro Pride Ride, a fully branded Disco Cart, featuring custom sign fabrication, vinyl wrap, branded polaroids, and full on mobile party."
+    ],
+    facts: [["Client", "Moro"], ["Moment", "PRIDE Month"], ["Role", "360° campaign, content, experiential, advertising"]],
+    scope: [
+      "Custom sign fabrication",
+      "Vinyl branded Disco Cart",
+      "Branded polaroid activation",
+      "Mobile party production and operation",
+      "Social content series production - Pride Ride Confessions"
+    ],
+    links: [
+      { text: "The Moro Pride Ride", href: "https://www.instagram.com/p/DK0XJ79S6Wh/" },
+      { text: "Pride Ride Confessions", href: "https://www.instagram.com/p/DK3MHDvP3Lu/" }
+    ],
+    heroSlot: "Hero image — the Moro Disco Cart on route",
+    heroImg: "media/web/moro-pride-ride-hero.jpg",
+    mediaSlots: ["Cart wrap detail", "Custom signage", "Branded polaroids"],
+    mediaImgs: ["media/web/moro-wrap-detail.jpg", "media/web/moro-custom-signage.jpg", "media/web/moro-branded-polaroid.jpg"],
+    mediaCrop: ["cover 50% 58%", "cover 50% 55%", "cover 60% 80%"]
+  },
+  {
+    title: "Liquid I.V. Beverage Carts & Hydration Stations",
+    meta: "Liquid I.V. · 2026 Peoples League Tour",
+    kicker: "Title sponsorship · Peoples League Tour",
+    tags: ["Vinyl-wrapped carts", "Modular hydration", "Custom signage"],
+    paras: [
+      "For Liquid I.V.'s title sponsorship of the 2026 Peoples League Tour, we produced a suite of mobile, high-impact brand activations—from fully vinyl-wrapped beverage carts and branded glass water bottles to modular hydration stations featuring product displays and custom signage, designed to break down easily and move seamlessly from tee box to tee box."
+    ],
+    facts: [["Client", "Liquid I.V."], ["Property", "2026 Peoples League Tour"], ["Role", "Production + fabrication"]],
+    scope: [
+      "Fully vinyl-wrapped beverage carts",
+      "Branded glass water bottles",
+      "Modular hydration stations with product displays",
+      "Custom signage, built to break down and move tee box to tee box"
+    ],
+    heroSlot: "Hero image — wrapped beverage cart on course",
+    heroImg: "media/web/liquid-iv-hero.jpg",
+    mediaSlots: ["Hydration station", "Branded bottles", "Golfers at station"],
+    mediaImgs: ["media/web/liquid-iv-hydration-station.jpg", "media/web/liquid-iv-bottles.jpg", "media/web/liquid-iv-station-golfers.jpg"],
+    mediaCrop: ["contain 50% 50%", "cover 50% 40%", "cover 50% 55%"]
+  },
+  {
+    title: "Up In Smoke Tour 25th Anniversary",
+    meta: "Interscope Records · ComplexCon · Interactive set",
+    kicker: "Interscope Records · ComplexCon",
+    tags: ["Bouncing lowrider set", "Chronic skull install", "Gin & Juice Bar"],
+    paras: [
+      "To mark the 25th anniversary of The Up In Smoke Tour—the most iconic hip-hop tour in history—Interscope Records transformed the ComplexCon floor into a parking lot party: a full-sensory brand experience complete with a custom bouncing lowrider photo set, a Chronic skull installation, and the Gin & Juice Bar, serving signature cocktails inspired by Dre and Snoop's timeless track."
+    ],
+    facts: [["Client", "Interscope Records"], ["Property", "ComplexCon"], ["Role", "Project Management"]],
+    scope: [
+      "Coordinate shipping + logistics",
+      "Oversee on-site buildout + strike",
+      "Manage production timelines",
+      "Cross-functional comms between vendors"
+    ],
+    heroSlot: "Hero image — bouncing lowrider photo set",
+    heroImg: "media/web/up-in-smoke-hero.jpg",
+    heroCrop: "cover 50% 38%",
+    mediaSlots: ["Lowrider set", "Chronic skull install", "Parking lot party floor"],
+    mediaImgs: ["media/web/up-in-smoke-lowrider.jpg", "media/web/up-in-smoke-skull.jpg", "media/web/up-in-smoke-floor.jpg"],
+    mediaCrop: ["cover 50% 58%", "cover 50% 42%", "160% 72% 48%"]
+  },
+  {
+    title: "GoPuff x Hoopbus College Takeover Tour",
+    meta: "GoPuff · Hoopbus · 38+ campus stops",
+    kicker: "Nationwide tour · 38+ stops",
+    tags: ["Multi-market tour", "Branded collateral", "Content"],
+    paras: [
+      "We oversaw GoPuff x Hoopbus' nationwide College Takeover Tour, bringing basketball, branded giveaways and high-energy experiences to students across 38+ stops. Our team managed timelines and content deliverables while coordinating all branded collateral—keeping the multi-market partnership moving seamlessly from campus to campus."
+    ],
+    facts: [["Client", "GoPuff"], ["Partner", "Hoopbus"], ["Role", "Content Production + Project Management"]],
+    scope: [
+      "Nationwide tour oversight across 38+ campus stops",
+      "Timeline and content deliverable management",
+      "Coordination of all branded collateral",
+      "Branded giveaways and on-campus experiences."
+    ],
+    heroSlot: "Hero image — Hoopbus on campus",
+    heroImg: "media/web/gopuff-hero.jpg",
+    heroCrop: "cover 50% 50%",
+    mediaSlots: ["Hoopbus on campus", "Campus giveaways", "College Take Over tent"],
+    mediaImgs: ["media/web/gopuff-hoopbus-campus.jpg", "media/web/gopuff-mascot-giveaway.jpg", "media/web/gopuff-tent.jpg"],
+    mediaCrop: ["cover 50% 38%", "cover 50% 45%", "cover 50% 42%"]
+  },
+  {
+    title: "nameless at ETH Denver",
+    meta: "nameless · ETH Denver · Physical, digital, live",
+    kicker: "nameless · ETH Denver",
+    tags: ["Merch production", "Interactive display", "Twitter Spaces"],
+    paras: [
+      "For nameless' ETH Denver activation, we developed and produced a cohesive branded experience spanning physical, digital, and live content. Scope included custom merch design and production, environmental signage, interactive display animations, & digital kiosk programming. The activation was extended beyond the event floor through a live Twitter Spaces broadcast, connecting IRL & digital audiences."
+    ],
+    facts: [["Client", "nameless"], ["Property", "ETH Denver"], ["Role", "Booth design + buildout, live audio broadcast, branded programming"]],
+    scope: [
+      "Custom merch design and production",
+      "Environmental signage",
+      "Interactive display animations and digital kiosk programming",
+      "Live Twitter Spaces broadcast connecting IRL and digital audiences"
+    ],
+    heroSlot: "Hero image — nameless activation at ETH Denver",
+    heroImg: "media/web/nameless-hero.jpg",
+    heroCrop: "cover 50% 45%",
+    mediaSlots: ["Environmental signage", "Digital kiosk", "Merch"],
+    mediaImgs: ["media/web/nameless-signage.jpg", "https://img.youtube.com/vi/l2R5kdoYxnA/hqdefault.jpg", "media/web/nameless-merch.jpg"],
+    mediaCrop: ["cover 50% 35%", "cover 50% 50%", "cover 50% 45%"],
+    mediaVideos: [null, "l2R5kdoYxnA", null]
+  },
+  {
+    title: "Gratitude For Sale Podcast",
+    meta: "Concept to launch · Studio + distribution",
+    kicker: "Podcast production",
+    tags: ["Pre-production", "Filming + recording", "Post + distribution"],
+    paras: [
+      "We produced the Gratitude For Sale podcast from concept to launch, providing studio sourcing, pre-production planning, filming and recording, talent relations, post-production, social asset creation, and distribution across leading podcast platforms."
+    ],
+    facts: [["Show", "Gratitude For Sale"], ["Engagement", "Concept to launch"], ["Role", "Full production"]],
+    scope: [
+      "Studio sourcing and pre-production planning",
+      "Filming, recording and talent relations",
+      "Post-production and social asset creation",
+      "Distribution across leading podcast platforms"
+    ],
+    titleHref: "https://open.spotify.com/show/2G7ggNB9WvcTYQptz47cbS?si=2CWOsx7kSKuvgJ-TjqzfVQ&utm_source=copy-link",
+    heroSlot: "Hero image — Gratitude For Sale studio set",
+    heroImg: "media/web/gratitude-hero.jpg",
+    heroCrop: "cover 50% 40%",
+    mediaSlots: ["On mic", "Social cutdowns", "In the studio"],
+    mediaImgs: ["media/web/gfs-host-man.jpg", "media/web/gfs-cutdowns.jpg", "media/web/gfs-host-woman.jpg"],
+    mediaCrop: ["cover 32% 42%", "213% 6% 18%", "cover 62% 42%"]
+  }
+];
+
+const NEEDS = ["Fabrication", "Mobile activation", "Merch", "Gifting", "Broadcast / podcast", "Full production", "Other"];
+
+function splitLink(str, links) {
+  for (let i = 0; i < (links || []).length; i++) {
+    const at = str.indexOf(links[i].text);
+    if (at !== -1) {
+      return {
+        hasLink: true, noLink: false,
+        pre: str.slice(0, at),
+        linkText: links[i].text,
+        href: links[i].href,
+        post: str.slice(at + links[i].text.length),
+        text: str
+      };
+    }
+  }
+  return { hasLink: false, noLink: true, pre: str, linkText: "", href: "", post: "", text: str };
+}
+
+class Component extends DCLogic {
+  state = { active: 0, needs: [], video: null, sending: false, sent: false, formError: "" };
+
+  nameRef = React.createRef();
+  emailRef = React.createRef();
+  companyRef = React.createRef();
+  briefRef = React.createRef();
+
+  submitForm = () => {
+    if (this.state.sending) return;
+    const name = (this.nameRef.current && this.nameRef.current.value || "").trim();
+    const email = (this.emailRef.current && this.emailRef.current.value || "").trim();
+    const brief = (this.briefRef.current && this.briefRef.current.value || "").trim();
+    if (!name || !email) {
+      this.setState({ formError: "Please add your name and email." });
+      return;
+    }
+    this.setState({ sending: true, formError: "" });
+    fetch("https://formsubmit.co/ajax/aa@transversaal.io", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "New project inquiry — transversaal.io",
+        Name: name,
+        Email: email,
+        Company: (this.companyRef.current && this.companyRef.current.value || "").trim(),
+        "What they need": this.state.needs.join(", ") || "Not specified",
+        Brief: brief
+      })
+    })
+      .then(r => r.json())
+      .then(() => this.setState({ sending: false, sent: true }))
+      .catch(() => this.setState({ sending: false, formError: "Something went wrong. Email aa@transversaal.io directly." }));
+  };
+
+  componentDidMount() {
+    this._onKey = (e) => { if (e.key === "Escape" && this.state.video) this.setState({ video: null }); };
+    window.addEventListener("keydown", this._onKey);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this._onKey);
+  }
+
+  renderVals() {
+    const active = this.state.active;
+    return {
+      services: SERVICES.map((s, i) => ({
+        num: String(i + 1).padStart(2, "0"),
+        name: s[0],
+        desc: s[1]
+      })),
+      projectList: PROJECTS.map((p, i) => ({
+        num: String(i + 1).padStart(2, "0"),
+        title: p.title,
+        meta: p.meta,
+        select: () => this.setState({ active: i }),
+        rowStyle: "display: flex; gap: 16px; align-items: flex-start; cursor: pointer; padding: 18px 20px; border-radius: 18px; transition: background 140ms ease; background: " +
+          (i === active ? "#312d2a" : "transparent") +
+          "; box-shadow: " + (i === active ? "inset 0 0 0 1.5px #c49a2a" : "none") +
+          "; color: " + (i === active ? "#f5ead8" : "#cfc3b0") + ";"
+      })),
+      active: {
+        title: PROJECTS[active].title,
+        kicker: PROJECTS[active].kicker,
+        titleHref: PROJECTS[active].titleHref || "",
+        hasTitleLink: !!PROJECTS[active].titleHref,
+        noTitleLink: !PROJECTS[active].titleHref,
+        summary: PROJECTS[active].paras[0],
+        summaryB: PROJECTS[active].paras[1] || "",
+        hasSummaryB: PROJECTS[active].paras.length > 1,
+        sb: splitLink(PROJECTS[active].paras[1] || "", PROJECTS[active].links),
+        tags: PROJECTS[active].tags,
+        scope: PROJECTS[active].scope,
+        scopeItems: PROJECTS[active].scope.map(line => splitLink(line, PROJECTS[active].links)),
+        heroSlot: PROJECTS[active].heroSlot,
+        heroImgStyle: (function () {
+          const c = (PROJECTS[active].heroCrop || "cover 50% 55%").split(" ");
+          return {
+            position: "absolute", inset: 0,
+            backgroundImage: 'url("' + (PROJECTS[active].heroImg || "") + '")',
+            backgroundSize: c[0],
+            backgroundPosition: c.slice(1).join(" "),
+            backgroundRepeat: "no-repeat"
+          };
+        })(),
+        hasHeroImg: !!PROJECTS[active].heroImg,
+        noHeroImg: !PROJECTS[active].heroImg,
+        mediaItems: PROJECTS[active].mediaSlots.map((label, i) => {
+          const url = (PROJECTS[active].mediaImgs || [])[i] || "";
+          const vid = (PROJECTS[active].mediaVideos || [])[i] || null;
+          const crop = ((PROJECTS[active].mediaCrop || [])[i] || "cover 50% 45%").split(" ");
+          const bgSize = crop[0];
+          const bgPos = crop.slice(1).join(" ");
+          const base = {
+            position: "relative", aspectRatio: "4 / 3", borderRadius: "14px",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: "10px", textAlign: "center", overflow: "hidden"
+          };
+          const isContain = bgSize === "contain";
+          let bg;
+          if (!url) {
+            bg = { background: "repeating-linear-gradient(135deg, #37332f 0 10px, #302c29 10px 20px)" };
+          } else {
+            bg = {
+              backgroundColor: "#201e1d",
+              backgroundImage: 'url("' + url + '")',
+              backgroundSize: isContain ? "cover" : bgSize,
+              backgroundPosition: isContain ? "50% 50%" : bgPos,
+              backgroundRepeat: "no-repeat"
+            };
+          }
+          return {
+            label: label,
+            noImg: !url,
+            hasVideo: !!vid,
+            onClick: vid ? () => this.setState({ video: vid }) : undefined,
+            isContain: isContain,
+            sharpStyle: {
+              position: "absolute", inset: 0,
+              backgroundImage: 'url("' + url + '")',
+              backgroundSize: "contain",
+              backgroundPosition: bgPos,
+              backgroundRepeat: "no-repeat",
+              backdropFilter: "blur(18px) brightness(0.7)"
+            },
+            style: Object.assign({}, base, bg, vid ? { cursor: "pointer" } : {})
+          };
+        }),
+        facts: PROJECTS[active].facts.map(f => ({ label: f[0], value: f[1] }))
+      },
+      submitForm: this.submitForm,
+      nameRef: this.nameRef,
+      emailRef: this.emailRef,
+      companyRef: this.companyRef,
+      briefRef: this.briefRef,
+      formSent: this.state.sent,
+      formLive: !this.state.sent,
+      submitLabel: this.state.sending ? "Sending…" : "Send it over",
+      hasFormError: !!this.state.formError,
+      formError: this.state.formError,
+      videoOpen: !!this.state.video,
+      closeVideo: () => this.setState({ video: null }),
+      videoWatchUrl: this.state.video ? "https://www.youtube.com/watch?v=" + this.state.video : "",
+      stopProp: (e) => e.stopPropagation(),
+      videoPlayer: this.state.video
+        ? React.createElement("iframe", {
+            src: "https://www.youtube-nocookie.com/embed/" + this.state.video + "?autoplay=1&rel=0&playsinline=1",
+            title: "Project video",
+            allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            allowFullScreen: true,
+            style: { position: "absolute", inset: 0, width: "100%", height: "100%", border: "0" }
+          })
+        : null,
+      needs: NEEDS.map(n => {
+        const on = this.state.needs.includes(n);
+        return {
+          label: n,
+          toggle: () => this.setState(s => ({
+            needs: s.needs.includes(n) ? s.needs.filter(x => x !== n) : s.needs.concat([n])
+          })),
+          style: "cursor: pointer; user-select: none; padding: 9px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; transition: all 120ms ease; border: 1.5px solid " +
+            (on ? "#cc3311" : "#e0cfae") + "; background: " + (on ? "#cc3311" : "transparent") +
+            "; color: " + (on ? "#fffaf0" : "#5a514a") + ";"
+        };
+      })
+    };
+  }
+}
+</script>
+</body>
+</html>
