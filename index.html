@@ -20,18 +20,18 @@
   ::selection { background: #f2cdc0; }
   :focus-visible { outline: 2px solid #cc3311; outline-offset: 2px; }
   input, textarea, button, select { font: inherit; }
-  @media (max-width: 1024px) {
+  @media (min-width: 1025px) {
     #hero-globe {
-      position: static;
-      top: auto;
-      right: auto;
-      width: min(300px, 66%);
-      height: auto;
-      aspect-ratio: 400 / 282;
-      margin: 0 0 22px;
-      opacity: 0.5;
+      position: absolute !important;
+      top: -30px !important;
+      right: -130px !important;
+      width: 520px !important;
+      height: 380px !important;
+      aspect-ratio: auto !important;
+      margin: 0 !important;
+      opacity: 0.6 !important;
     }
-    #hero-copy { max-width: 100%; }
+    #hero-copy { max-width: min(900px, max(240px, calc(100% - 350px))) !important; }
   }
 </style>
 </helmet>
@@ -54,7 +54,7 @@
   </div>
 
   <section style="max-width: 1320px; margin: 0 auto; padding: clamp(36px, 7vw, 96px) clamp(20px, 5vw, 64px) clamp(40px, 6vw, 80px); position: relative;">
-    <div id="hero-globe" style="position: absolute; top: -30px; right: -130px; width: 520px; height: 380px; z-index: 0; pointer-events: none; opacity: 0.6;">
+    <div id="hero-globe" style="position: static; width: min(300px, 66%); aspect-ratio: 400 / 282; margin: 0 0 22px; z-index: 0; pointer-events: none; opacity: 0.5;">
       <svg viewBox="0 0 400 282" width="100%" height="100%" fill="none" stroke="#c49a2a" stroke-width="3" aria-hidden="true">
         <ellipse cx="200" cy="141" rx="146" ry="128"></ellipse>
         <ellipse cx="200" cy="141" rx="100" ry="128"></ellipse>
@@ -65,7 +65,7 @@
         <path d="M78 200 C 130 220, 270 220, 322 200"></path>
       </svg>
     </div>
-    <div id="hero-copy" style="position: relative; z-index: 1; max-width: min(900px, max(240px, calc(100% - 350px)));">
+    <div id="hero-copy" style="position: relative; z-index: 1; max-width: 100%;">
       <div style="font-family: 'DM Mono', ui-monospace, monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a6b14; margin-bottom: 22px;">Experiential Marketing · Concepting · Fabrication</div>
       <h1 style="font-family: 'Caprasimo', Georgia, serif; font-weight: 400; font-size: clamp(42px, 8vw, 92px); line-height: 0.98; letter-spacing: -0.015em; margin: 0 0 28px; text-wrap: balance;">We build how your brand shows up IRL.</h1>
       <p style="font-size: clamp(17px, 2.2vw, 22px); line-height: 1.55; color: #4a423c; max-width: 640px; margin: 0 0 36px; text-wrap: pretty;">Transversaal concepts, designs, fabricates and executes physical brand experiences — vehicles, sets, stages and studios.</p>
